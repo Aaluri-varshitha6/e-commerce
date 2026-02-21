@@ -45,6 +45,7 @@ const Cart = () => {
             {
               cartData.map((item,index)=>{
                 const productData = products.find((product) => product._id === item._id);
+                if(!productData) return null;
 
                 return(
                     <div className="py-4 border-t border-b

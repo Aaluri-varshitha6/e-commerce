@@ -69,6 +69,7 @@ const ShopContextProvider = (props) => {
 
                     }
                 } catch (error) {
+                    console.log(error)
                     
                 }
         }
@@ -103,6 +104,7 @@ const ShopContextProvider = (props) => {
                         totalAmount += itemInfo.price * cartItems[items][item]
                     }
                 } catch (error) {
+                    console.log(error)
                     
                 }
             }
