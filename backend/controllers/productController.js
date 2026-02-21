@@ -64,22 +64,9 @@ export const  listProducts = async (req,res) =>{
 
 }
 
-//remove product
-//export const  removeProduct = async (req,res) =>{
-   // try {
-       // await Product.findByIdAndDelete(req.body.id);
-       // res.json({success:true,message:"Product removed"})
 
-    //} catch (error) {
-      //   console.log(error)
-       // res.json({success:false,message:error.message}) 
 
-        
-    //}
-
-//}
-
-//remove product route for chat gpt corrected
+//remove product route 
 export const removeProduct = async (req, res) => {
     try {
 
@@ -95,23 +82,10 @@ export const removeProduct = async (req, res) => {
     }
 }
 
-//singleproduct
-//export const  singleProduct = async (req,res) =>{
-    //try {
-    //    const { productId } = req.body;
-      //  const product = await Product.findById(productId)
-     //   res.json({success:true,product});
-
-   // } catch (error) {
-     //   console.log(error);
-      //  res.json({ success: false, message: error.message });
-        
-    //}
-
-//}
 
 
-//singleproduct route for chat gpt corrected
+
+//singleproduct route 
 export const singleProduct = async (req, res) => {
   try {
     const { id } = req.params;

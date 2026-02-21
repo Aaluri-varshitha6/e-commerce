@@ -31,6 +31,8 @@ app.use("/api/order",orderRouter);
 
 
 
-app.listen(port,()=>{
-    console.log(`server is running on ${port}`)
-})
+if(process.env.VERCEL !== '1'){
+    app.listen(port,()=>{
+        console.log(`server running on ${port}`)
+    });
+}
