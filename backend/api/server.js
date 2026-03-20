@@ -1,12 +1,12 @@
 import express from 'express'
 import 'dotenv/config'
 import cors from 'cors'
-import connectDB from './config/db.js';
-import connectCloudinary from './config/cloudinary.js';
-import userRouter from './routes/userRoute.js';
-import productRouter from './routes/productRoute.js';
-import cartRouter from './routes/cartRoute.js';
-import orderRouter from './routes/orderRoute.js';
+import connectDB from '../config/db.js';
+import connectCloudinary from '../config/cloudinary.js';
+import userRouter from '../routes/userRoute.js';
+import productRouter from '../routes/productRoute.js';
+import cartRouter from '../routes/cartRoute.js';
+import orderRouter from '../routes/orderRoute.js';
 
 
 const app = express();
@@ -27,12 +27,4 @@ app.use("/api/product",productRouter);
 app.use("/api/cart",cartRouter);
 app.use("/api/order",orderRouter);
 
-
-
-
-
-if(process.env.VERCEL !== '1'){
-    app.listen(port,()=>{
-        console.log(`server running on ${port}`)
-    });
-}
+export default app;
